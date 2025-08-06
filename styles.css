@@ -26,6 +26,10 @@ hr {
     width: 80%;
 }
 
+strong {
+    color: var(--third-color);
+}
+
 /* Header */
 
 .header {
@@ -95,9 +99,6 @@ hr {
     
 }
 
-.bienvenida_texto strong {
-    color: var(--third-color);
-}
 
 .bienvenida_boton {
     display: flex;
@@ -224,6 +225,56 @@ hr {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     gap: 10px;
 }
+
+/* Sobre mi */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.sobre-mi-contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.sobre-mi-texto {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+}
+
+.sobre-mi-texto p {
+    margin-bottom: 10px;
+}
+
+.sobre-mi-texto strong {
+    color: var(--third-color);
+}
+
+.sobre-mi-contenido img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+    filter: grayscale(100%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+
 
 @media (max-width: 1000px) {
     .bienvenida {
