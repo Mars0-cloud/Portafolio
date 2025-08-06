@@ -123,8 +123,8 @@ hr {
 }
 
 .bienvenida_imagen {
-    width: 300px;
-    height: 300px;
+    width: 30%;
+    height: auto;
     border-radius: 25%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     filter: grayscale(100%);
@@ -258,7 +258,13 @@ hr {
     }
 
     .habilidades_lista {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+    }
+
+    .habilidad {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 }
