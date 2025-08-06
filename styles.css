@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--primary-color);
@@ -24,6 +28,10 @@ hr {
     background-color: var(--third-color);
     margin: 0 10px 20px 0;
     width: 80%;
+}
+
+section {
+  scroll-margin-top: 80px; /* ajusta según el alto de tu navbar */
 }
 
 strong {
@@ -393,6 +401,7 @@ strong {
 
 .footer_info p {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .footer_social {
@@ -403,6 +412,7 @@ strong {
 .footer_link {
     text-decoration: none;
     color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 .footer_link:hover {
