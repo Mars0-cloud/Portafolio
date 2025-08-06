@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,9 +13,10 @@
         <nav class="navbar">
             <a href="#bienvenida" ><img src="assets/logo-white.png" class="navbar_logo" alt="logo-white"></a>
             <ul class="navbar_links">
-                <li class="navbar_links_a"><a href="#about">Sobre mí</a></li>
                 <li class="navbar_links_a"><a href="#proyectos">Proyectos</a></li>
-                <li class="navbar_links_a"><a href="#contact">Contacto</a></li>
+                <li class="navbar_links_a"><a href="#habilidades">Skills</a></li>
+                <li class="navbar_links_a"><a href="#about">Sobre mí</a></li>
+                <li class="navbar_links_a"><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -31,9 +33,10 @@
 
                 <div class="bienvenida_boton">
                     <h3 class="bienvenida_boton_texto">Contactame:</h3>
-                    <a href="https://www.linkedin.com/in/mat%C3%ADas20-rs/" class="bienvenida_boton_a">LinkedIn</a>
-                    <a href="https://github.com/Mars0-cloud" class="bienvenida_boton_a">GitHub</a>
-                    <a href="#" class="bienvenida_boton_a">CV</a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas20-rs/" class="bienvenida_boton_a"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Mars0-cloud" class="bienvenida_boton_a"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" mail-to="matias20.rs@gmail.com" class="bienvenida_boton_a"><i class="fa-brands fa-google"></i> Gmail</a>
+                    <a href="#" class="bienvenida_boton_a"><i class="fa-solid fa-file"></i> CV</a>
                 </div>
             </div>
 
@@ -66,31 +69,48 @@
         </section>
 
         <!-- Habilidades -->
-        <section id="about" class="habilidades">
+        <section id="habilidades" class="habilidades">
             <h2>Habilidades</h2>
             <hr/>
-            <ul class="habilidades_lista">
-                <li class="habilidad">HTML</li>
-                <li class="habilidad">CSS</li>
-                <li class="habilidad">JavaScript</li>
-                <li class="habilidad">React</li>
-                <li class="habilidad">Node.js</li>
-                <li class="habilidad">Python</li>
-                <li class="habilidad">MySQL</li>
-                <li class="habilidad">SQL</li>
-                <li class="habilidad">Git</li>
-            </ul>
+            <div class="habilidades_contenido">
+                <ul class="habilidades_lista">
+                    <li class="habilidad"><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li class="habilidad"><i class="fa-brands fa-css3"></i> CSS</li>
+                    <li class="habilidad"><i class="fa-brands fa-js"></i> JavaScript</li>
+                    <li class="habilidad"><i class="fa-brands fa-react"></i> React</li>
+                    <li class="habilidad"><i class="fa-brands fa-node-js"></i> Node.js</li>
+                    <li class="habilidad"><i class="fa-brands fa-python"></i> Python</li>
+                    <li class="habilidad"><i class="fa-solid fa-database"></i> MySQL</li>
+                    <li class="habilidad"><i class="fa-solid fa-database"></i> SQL</li>
+                    <li class="habilidad"><i class="fa-brands fa-git-alt"></i> Git</li>
+                </ul>
+
+                <img src="" alt="">
+            </div>
 
         </section>
 
         <!-- Sobre mí -->
+        <section id="about" class="about">
+            <h2>Sobre mí</h2>
+            <hr/>
+            <p>Soy un apasionado de la tecnología y el desarrollo web. Me encanta aprender nuevas tecnologías y enfrentarme a nuevos desafíos. Siempre estoy buscando mejorar mis habilidades y contribuir a proyectos interesantes.</p>
 
+        </section>
         <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <hr/>
+            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a 
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer>
 
     </footer>
+
+    <script src="https://kit.fontawesome.com/cd9e99a2e4.js" crossorigin="anonymous"></script>
 </body>
 </html>

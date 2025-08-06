@@ -103,7 +103,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding: 10px 20px;
+    padding: 10px 5px;
     font-size: 1.2rem;
     gap: 10px;
 }
@@ -112,7 +112,7 @@ hr {
     text-decoration: none;
     color: var(--secondary-color);
     background-color: var(--third-color);
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -168,7 +168,6 @@ hr {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .proyecto_boton {
@@ -214,13 +213,52 @@ hr {
 
 .habilidad {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
     width: 150px;
     padding: 10px;
     border: var(--secondary-color) solid 1px;
     border-radius: 10px;
     background-color: var(--primary-color);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    
+    gap: 10px;
+}
+
+@media (max-width: 1000px) {
+    .bienvenida {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        height: auto;
+        gap: 20px;
+        padding-top: 100px;
+    }
+
+    .bienvenida_texto {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .bienvenida_imagen {
+        width: 80%;
+        height: auto;
+    }
+
+    .bienvenida_boton {
+        flex-direction:row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .proyectos_lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .habilidades_lista {
+        flex-direction: column;
+        align-items: center;
+    }
 }
