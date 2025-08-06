@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Portafolio - Matías Riquelme</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -94,7 +94,7 @@
         <section id="about" class="about">
             <h2>Sobre mí</h2>
             <hr/>
-            
+
             <div class="sobre-mi-contenido">
                 <div class="sobre-mi-texto">
                     <p>Soy un desarrollador web full stack con experiencia en la creación de aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript, React, Node.js y Python. Me apasiona aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
@@ -105,17 +105,54 @@
 
         </section>
         <!-- Contacto -->
-        <section id="contacto">
+        <section id="contacto" class="contacto">
             <h2>Contacto</h2>
             <hr/>
-            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo electrónico a 
+            
+            <div class="contacto_contenido">
+                <div class="contacto_texto">
+                    <p>Si deseas ponerte en contacto conmigo, puedes enviarme un mensaje a través del siguiente formulario o contactarme directamente por correo electrónico.</p>
+                    <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡Espero saber de ti pronto!</p>
+                    
+                    <h3>Mis redes de contacto:</h3>
+                    <div class="bienvenida_boton">
+                        <a href="https://www.linkedin.com/in/mat%C3%ADas20-rs/" class="bienvenida_boton_a"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/Mars0-cloud" class="bienvenida_boton_a"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" mail-to="matias20.rs@gmail.com" class="bienvenida_boton_a"><i class="fa-brands fa-google"></i> Gmail</a>
+                        <a href="#" class="bienvenida_boton_a"><i class="fa-solid fa-file"></i> CV</a>
+                    </div>
+                </div>
+
+
+                <form class="contacto_formulario" action="#"  method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer>
-
+    <footer class="footer">
+        <div class="footer_info">
+            <p>&copy; 2024 Matías Riquelme. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer_social">
+            <a href="#bienvenida" class="footer_link">Inicio</a>
+            <a href="#proyectos" class="footer_link">Proyectos</a>
+            <a href="#habilidades" class="footer_link">Skills</a>
+            <a href="#about" class="footer_link">Sobre mí</a>
+            <a href="#contacto" class="footer_link">Contacto</a>
     </footer>
 
     <script src="https://kit.fontawesome.com/cd9e99a2e4.js" crossorigin="anonymous"></script>
