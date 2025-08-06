@@ -164,6 +164,13 @@ hr {
     
 }
 
+.proyecto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .proyecto_boton {
     text-decoration: none;
     color: var(--secondary-color);
