@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #fbfaf8;
+    --secondary-color: #000;
+    --third-color: #609d51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--third-color);
+    margin: 0 10px 20px 0;
+    width: 80%;
+}
+
+/* Header */
+
+.header {
+    padding: 10px 40px;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: rgba(251, 250, 248, 0.5);
+    backdrop-filter: blur(5px);
+    color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 50px;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    width: 80px;
+}
+
+.navbar_links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar_links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar_links a:hover {
+    color: var(--third-color);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Main */
+
+/* Bienvenida */
+
+.bienvenida {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 50px;
+    height: 100vh;
+}
+
+.bienvenida_texto {
+    flex-direction: column;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    max-width: 600px;
+    
+}
+
+.bienvenida_texto strong {
+    color: var(--third-color);
+}
+
+.bienvenida_boton {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.bienvenida_boton_a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.bienvenida_boton_a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bienvenida_imagen {
+    width: 300px;
+    height: 300px;
+    border-radius: 25%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%);
+}
+
+/* Proyectos */
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.proyectos_lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.proyecto {
+    border: #000 solid 1px;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    padding: 10px;
+    
+}
+
+.proyecto_boton {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--third-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.proyecto_boton:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Habilidades */
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.habilidades_lista {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    list-style: none;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 10px;
+    border: var(--secondary-color) solid 1px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
