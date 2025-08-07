@@ -130,7 +130,7 @@ strong {
 .bienvenida_boton_a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .bienvenida_imagen {
@@ -289,7 +289,6 @@ strong {
     flex-direction: column;
     align-items: center;
     padding: 20px 50px;
-    margin-bottom: 50px;
 }
 
 .contacto h2 {
@@ -329,7 +328,7 @@ strong {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 100%;
+    width: 500px;
 }
 
 .contacto_formulario label {
@@ -341,7 +340,7 @@ strong {
 .contacto_formulario textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--fourth-color);
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -585,5 +584,15 @@ strong {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    .habilidades_lista {
+        flex-direction: wrap;
+        justify-content: center;
+        max-width: 100%; 
+    }
+
+    .habilidad {
+        width: 100%;
+        max-width: 300px;
+    }
 
 }
