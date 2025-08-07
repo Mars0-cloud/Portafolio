@@ -420,6 +420,21 @@ strong {
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
 }
 
+.navbar_toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.navbar_toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 
 @media (max-width: 1000px) {
     .bienvenida {
@@ -514,4 +529,31 @@ strong {
         justify-content: center;
     }
     
+}
+
+@media (max-width: 768px) {
+    .navbar_toggle {
+        display: flex;
+    }
+
+    .navbar_links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .navbar_links.show {
+        max-height: 300px; /* suficiente para mostrar los links */
+    }
+
+    .navbar_links a {
+        padding: 10px;
+        text-align: center;
+    }
 }
