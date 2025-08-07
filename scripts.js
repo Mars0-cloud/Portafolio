@@ -1,3 +1,5 @@
+AOS.init();
+
 const form = document.getElementById('formulario');
 
   form.addEventListener('submit', async function (e) {

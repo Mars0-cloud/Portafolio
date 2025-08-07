@@ -2,6 +2,7 @@
     --primary-color: #fbfaf8;
     --secondary-color: #000;
     --third-color: #609d51;
+    --fourth-color: #f0f0f0;
 }
 
 * {
@@ -166,7 +167,7 @@ strong {
 }
 
 .proyecto {
-    border: #000 solid 1px;
+    background-color: var(--fourth-color);
     border-radius: 10px;
     width: 300px;
     overflow: hidden;
@@ -192,7 +193,7 @@ strong {
 .proyecto_boton:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* Habilidades */
@@ -228,10 +229,10 @@ strong {
     font-size: 1.5rem;
     width: 150px;
     padding: 10px;
-    border: var(--secondary-color) solid 1px;
+    border: var(--fourth-color) solid 1px;
     border-radius: 10px;
     background-color: var(--primary-color);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     gap: 10px;
 }
 
@@ -534,29 +535,55 @@ strong {
 
 @media (max-width: 768px) {
     .navbar_toggle {
-    display: flex;
-  }
+        display: flex;
+    }
 
-  .navbar_links {
-    position: absolute;
-    top: 90px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    flex-direction: column;
-    align-items: end;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-  }
+    .navbar_links {
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: rgba(251, 250, 248, 0.5);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        text-align: right;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
 
-  .navbar_links.show {
-    max-height: 300px; /* Ajusta según tus links */
-  }
+    .navbar_links.show {
+        max-height: 400px; /* Ajusta según tus links */
+        padding-top: 40px;
+        padding-bottom: 40px;
+        z-index: 1005;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-  .navbar_links a {
-    padding: 10px;
-    text-align: center;
-  }
+    }
+
+    .navbar_links.show .navbar {
+        box-shadow: none;
+    }
+
+    .navbar_links a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar_links a:hover {
+        color: var(--third-color);
+    }
+
+    .navbar_toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
     
+    .navbar_toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar_toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+
 }
