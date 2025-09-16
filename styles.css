@@ -166,18 +166,41 @@ strong {
     padding: 20px;
 }
 
+/* comienza el juego */
+.proyectos_lista > div {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.proyectos_lista > div:nth-child(1) {
+    flex: 0 0 100%; /* ocupa todo el ancho*/
+}
+
+.proyectos_lista > div:nth-child(2),
+.proyectos_lista > div:nth-child(3) {
+    flex: 0 0 45%;
+}
+/* termina el juego */
+
 .proyecto {
     background-color: var(--fourth-color);
     border-radius: 10px;
-    width: 300px;
+    width: 400px;
     overflow: hidden;
     padding: 10px;
-    
+}
+
+
+.project-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
 }
 
 .proyecto img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
 }
 
