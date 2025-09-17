@@ -67,7 +67,18 @@
                         <p>App web en Django que importa películas vistas desde Letterboxd, permite aplicar filtros, ordenar y ver detalles enriquecidos usando la API de TMDb.</p>
                         <p><strong>Tecnologías:</strong> Django · Python · Bootstrap · TMDb API</p>
                         <div class="project-links">
-                            <a class="proyecto_boton" href="#" target="_blank">Ver demo</a>
+                            <a class="proyecto_boton" href="#" target="_blank" onclick="openModal(event)">Ver demo</a>
+                            <!-- Video Oculto -->
+                            <div id="videoModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" onclick="closeModal()">&times;</span>
+                                    <video id="demoVideo" autoplay muted controls style="width:100%; border-radius: 10px;">
+                                    <source src="assets/videos/Video-Proyecto-1.mp4" type="video/mp4">
+                                    Tu navegador no soporta videos HTML5.
+                                    </video>
+                                </div>
+                            </div>
+
                             <a class="proyecto_boton" href="https://github.com/Mars0-cloud/planeta-marsiano" target="_blank">Código</a>
                         </div>
                     </div>

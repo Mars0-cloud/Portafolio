@@ -45,4 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Video Proyecto 1
+function openModal(e) {
+  e.preventDefault(); // evitar que el <a> recargue la página
+  document.getElementById("videoModal").style.display = "block";
+  document.getElementById("demoVideo").play(); // arranca el video
+}
 
+function closeModal() {
+  document.getElementById("videoModal").style.display = "none";
+  document.getElementById("demoVideo").pause(); // pausa el video al cerrar
+}
