@@ -209,10 +209,6 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mars0-cloud)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matias20.rs@gmail.com)
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
 ---
 
 ⭐ **¡Si te gusta este proyecto, no olvides darle una estrella!** ⭐
