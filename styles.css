@@ -529,7 +529,7 @@ strong {
 .sobre-mi-contenido {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 50px;
     max-width: 1200px;
@@ -557,13 +557,13 @@ strong {
     flex: 0 0 350px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .sobre-mi-imagen img {
     width: 100%;
     max-width: 350px;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     border-radius: 15px;
     filter: grayscale(100%);
