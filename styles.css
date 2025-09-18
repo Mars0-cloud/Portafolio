@@ -18,6 +18,19 @@
     --bootstrap-color: #7952b3;
 }
 
+/* Modo oscuro */
+[data-theme="dark"] {
+    --primary-color: #1a1a1a;
+    --secondary-color: #ffffff;
+    --third-color: #7bb96b;
+    --fourth-color: #2d2d2d;
+}
+
+/* Transición suave para cambio de tema */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,10 +42,44 @@ html {
     overflow-x: hidden;
 }
 
+/* Botón de cambio de tema */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--third-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(20deg);
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--primary-color);
-    color: var(--secundary-color);
+    color: var(--secondary-color);
     line-height: 1.6;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -82,11 +129,28 @@ strong {
     transition: all 0.3s ease;
 }
 
+[data-theme="dark"] .navbar {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
 .navbar_logo {
     display: flex;
     align-items: center;
     width: 80px;
     transition: transform 0.3s ease;
+}
+
+/* Mostrar/ocultar logos según el tema */
+.logo-dark {
+    display: none;
+}
+
+[data-theme="dark"] .logo-light {
+    display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+    display: block;
 }
 
 .navbar_logo:hover {
@@ -145,6 +209,10 @@ strong {
     flex-wrap: wrap;
 }
 
+.bienvenida_boton_texto {
+    margin-right: 10px;
+}
+
 .bienvenida_boton_a {
     text-decoration: none;
     color: var(--secondary-color);
@@ -181,7 +249,7 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 50px;
+    padding: 80px 50px 20px 50px;
     overflow-x: hidden;
 }
 
@@ -278,7 +346,7 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 50px;
+    padding: 80px 50px 20px 50px;
     overflow-x: hidden;
 }
 
@@ -431,12 +499,12 @@ strong {
     box-shadow: 0 10px 25px rgba(68, 121, 161, 0.4);
 }
 
-/* Sobre mi */
+/* Sobre mí - MEJORADO */
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 50px;
+    padding: 80px 50px 20px 50px;
     overflow-x: hidden;
 }
 
@@ -449,20 +517,23 @@ strong {
 .sobre-mi-contenido {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 20px;
-    max-width: 1000px;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .sobre-mi-texto {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--secondary-color);
-    max-width: 600px;
+    flex: 1;
+    line-height: 1.8;
 }
 
 .sobre-mi-texto p {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: justify;
 }
 
@@ -470,9 +541,17 @@ strong {
     color: var(--third-color);
 }
 
-.sobre-mi-contenido img {
-    width: 400px;
-    height: 400px;
+.sobre-mi-imagen {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sobre-mi-imagen img {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 15px;
     filter: grayscale(100%);
@@ -480,17 +559,17 @@ strong {
     transition: all 0.3s ease;
 }
 
-.sobre-mi-contenido img:hover {
+.sobre-mi-imagen img:hover {
     filter: grayscale(0%);
     transform: scale(1.05);
 }
 
-/* Contacto */
+/* Contacto - MEJORADO */
 .contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 50px;
+    padding: 80px 50px 20px 50px;
     overflow-x: hidden;
 }
 
@@ -505,38 +584,39 @@ strong {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
     max-width: 1200px;
     width: 100%;
+    margin-top: 30px;
 }
 
 .contacto_texto {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--secondary-color);
-    max-width: 600px;
     flex: 1;
+    line-height: 1.8;
 }
 
 .contacto_texto p {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: justify;
 }
 
 .contacto_texto h3{
-    margin-top: 20px;
+    margin: 30px 0 20px 0;
     color: var(--secondary-color);
-    font-size: 1.5rem;
-    text-align: start;
+    font-size: 1.6rem;
+    text-align: left;
 }
 
 .contacto_formulario {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     flex: 1;
     max-width: 500px;
     background-color: var(--fourth-color);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -556,7 +636,7 @@ strong {
 .contacto_formulario input,
 .contacto_formulario textarea {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
@@ -704,13 +784,18 @@ strong {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
+        gap: 30px;
     }
 
     .sobre-mi-texto {
         max-width: 100%;
     }
 
-    .sobre-mi-contenido img {
+    .sobre-mi-imagen {
+        flex: none;
+    }
+
+    .sobre-mi-imagen img {
         width: 300px;
         height: 300px;
     }
@@ -769,6 +854,10 @@ strong {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
+    [data-theme="dark"] .navbar_links {
+        background-color: rgba(26, 26, 26, 0.95);
+    }
+
     .navbar_links.show {
         max-height: 400px;
         padding: 20px 0;
@@ -796,7 +885,7 @@ strong {
 
     /* Habilidades responsive */
     .habilidades {
-        padding: 20px 20px;
+        padding: 60px 20px 20px 20px;
     }
 
     .skills-section {
@@ -828,7 +917,7 @@ strong {
     .proyectos,
     .about,
     .contacto {
-        padding: 20px 20px;
+        padding: 60px 20px 20px 20px;
     }
 
     .bienvenida {
@@ -849,5 +938,14 @@ strong {
 
     .skills-title {
         font-size: 1.1rem;
+    }
+    
+    .sobre-mi-imagen img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .contacto_formulario {
+        padding: 20px;
     }
 }

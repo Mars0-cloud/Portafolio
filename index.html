@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Head -->
     <header class="header">
         <nav class="navbar">
-            <a href="#bienvenida" ><img src="assets/img/logo-white.png" class="navbar_logo" alt="logo-white"></a>
+            <a href="#bienvenida">
+                <img src="assets/img/logo-white.png" class="navbar_logo logo-light" alt="logo-white">
+                <img src="assets/img/logo-black.png" class="navbar_logo logo-dark" alt="logo-black">
+            </a>
 
             <div class="navbar_toggle" id="navbar-toggle">
                 <span></span>
@@ -63,7 +65,7 @@
                 <div class="proyecto">
                     <img src="assets/img/proyecto-1.png" alt="Proyecto 1">
                     <div class="project-info">
-                        <h3>Planeta Marsiano – Biblioteca de Películas</h3>
+                        <h3>Planeta Marsiano — Biblioteca de Películas</h3>
                         <p>App web en Django que importa películas vistas desde Letterboxd, permite aplicar filtros, ordenar y ver detalles enriquecidos usando la API de TMDb.</p>
                         <p><strong>Tecnologías:</strong> Django · Python · Bootstrap · TMDb API</p>
                         <div class="project-links">
@@ -90,7 +92,7 @@
             <a href="#" class="proyecto_boton">Ver más</a>
         </section>
 
-        <!-- Habilidades - REEMPLAZAR EN TU index.html -->
+        <!-- Habilidades -->
         <section data-aos="fade-up fade-down" id="habilidades" class="habilidades">
             <h2>Habilidades</h2>
             <hr/>
@@ -121,32 +123,39 @@
             </div>
         </section>
 
-        <!-- Sobre mí -->
+        <!-- Sobre mí - MEJORADO -->
         <section data-aos="fade-up fade-down" id="about" class="about">
             <h2>Sobre mí</h2>
             <hr/>
 
             <div class="sobre-mi-contenido">
                 <div class="sobre-mi-texto">
-                    <p>Soy un desarrollador web full stack con experiencia en la creación de aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript, React, Node.js y Python. Me apasiona aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
-                    <p>Me considero una persona proactiva, responsable y con habilidades para trabajar en equipo. Estoy siempre dispuesto a enfrentar nuevos desafíos y contribuir al éxito de los proyectos en los que participo.</p>
+                    <p>Hola, soy <strong>Matías</strong>, desarrollador full stack apasionado por crear soluciones web que realmente importen. Todo comenzó hace unos años cuando decidí que quería construir cosas en internet, y desde entonces no he parado de aprender.</p>
+                    
+                    <p>Me gusta trabajar tanto en el frontend como en el backend porque disfruto ver cómo una idea se convierte en una aplicación completa y funcional. Cuando no estoy programando, probablemente me encuentres viendo alguna película (soy un cinéfilo confeso) o explorando nuevas tecnologías que pueda incorporar en mis proyectos.</p>
+                    
+                    <p>Lo que más me motiva es ese momento cuando todo hace "click" - ya sea resolviendo un bug complejo, aprendiendo un concepto nuevo, o viendo cómo alguien usa algo que construí. <strong>Siempre estoy buscando nuevos desafíos</strong> y oportunidades para crecer como desarrollador.</p>
                 </div>
-                <img src="assets/img/foto-piscina.jpg" alt="foto-casual">
+                
+                <div class="sobre-mi-imagen">
+                    <img src="assets/img/foto-piscina.jpg" alt="foto-casual">
+                </div>
             </div>
 
         </section>
 
-        <!-- Contacto -->
+        <!-- Contacto - MEJORADO -->
         <section data-aos="fade-up fade-down" id="contacto" class="contacto">
             <h2>Contacto</h2>
             <hr/>
             
             <div class="contacto_contenido">
                 <div class="contacto_texto">
-                    <p>Si deseas ponerte en contacto conmigo, puedes enviarme un mensaje a través del siguiente formulario o contactarme directamente por correo electrónico.</p>
-                    <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡Espero saber de ti pronto!</p>
+                    <p>¿Tienes un proyecto en mente? ¿Una idea que quieres hacer realidad? Me encantaría escuchar de ti. Ya sea que necesites ayuda con desarrollo web, tengas preguntas sobre algún proyecto, o simplemente quieras conectar, no dudes en contactarme.</p>
                     
-                    <h3>Mis redes de contacto:</h3>
+                    <p>Respondo todos los mensajes y siempre estoy abierto a nuevas oportunidades y colaboraciones interesantes. <strong>¡Hablemos y veamos qué podemos crear juntos!</strong></p>
+                    
+                    <h3>Encuéntrame aquí:</h3>
                     <div class="bienvenida_boton">
                         <a href="https://www.linkedin.com/in/mat%C3%ADas20-rs/" class="bienvenida_boton_a"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="https://github.com/Mars0-cloud" class="bienvenida_boton_a"><i class="fab fa-github"></i> GitHub</a>
@@ -155,24 +164,28 @@
                     </div>
                 </div>
 
-
                 <form class="contacto_formulario" id="formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre..." required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico..." required>
+                    <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required>
 
                     <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
 
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Enviar mensaje</button>
                 </form>
 
             </div>
         </section>
 
     </main>
+
+    <!-- Botón de cambio de tema -->
+    <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
@@ -185,6 +198,7 @@
             <a href="#habilidades" class="footer_link">Skills</a>
             <a href="#about" class="footer_link">Sobre mí</a>
             <a href="#contacto" class="footer_link">Contacto</a>
+        </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/cd9e99a2e4.js" crossorigin="anonymous"></script>
